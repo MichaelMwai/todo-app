@@ -1,5 +1,5 @@
 export function Tabs(props) {
-  const { todos } = props;
+  const { todos, selectedTab, setSelectedTab } = props;
   const tabs = ["All", "Open", "Completed"];
 
   return (
@@ -13,7 +13,12 @@ export function Tabs(props) {
             : todos.filter((val) => val.complete).length;
 
         return (
-          <button key={tabIndex} className="tab-button">
+          <button
+            key={tabIndex}
+            className={
+              "tab-button " + (tab === selectedTab ? " tab-selected" : "")
+            }
+          >
             <h4>
               {tab}
               <span> {numOftasks}</span>
