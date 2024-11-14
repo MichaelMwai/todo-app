@@ -1,6 +1,5 @@
 export function Tabs(props) {
   const { todos } = props;
-  const { greating } = props;
   const tabs = ["All", "Open", "Completed"];
 
   return (
@@ -19,7 +18,6 @@ export function Tabs(props) {
               {tab}
               <span> {numOftasks}</span>
             </h4>
-            {greating}
           </button>
         );
       })}
