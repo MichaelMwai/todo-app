@@ -8,8 +8,8 @@ function App() {
     { input: "Hello! Add your first todo!", complete: true },
     { input: "Get the groceries!", complete: false },
     { input: "Learn how to web design", complete: false },
-    { input: "Say hi to gran granma", complete: true },
-    { input: "Learn how to web design", complete: false },
+    { input: "Check out ${userName}", complete: true },
+    { input: "Hire Michael", complete: false },
   ];
 
   const userName = "Michael";
