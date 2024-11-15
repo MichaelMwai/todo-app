@@ -1,9 +1,9 @@
 import { TodoCard } from "./TodoCard";
 
 export function TodoList(props) {
-  const { todos } = props;
+  const { todos, selectedTab } = props;
 
-  const tab = "All";
+  const tab = selectedTab;
   // Filter the todo list based on the selected tab (All, Open, Completed)
 
   const filterTodoList =
@@ -16,7 +16,11 @@ export function TodoList(props) {
   return (
     <>
       {filterTodoList.map((todo, todoIndex) => (
-        <TodoCard key={todoIndex} todo={todo} />
+        <TodoCard
+          key={todoIndex}
+          todo={todo}
+          isHireMichael={todo.input === "HIRED MICHAEL"} // Pass a prop to indicate if it's "Hire Michael"
+        />
       ))}
     </>
   );

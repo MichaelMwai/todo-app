@@ -1,117 +1,88 @@
-/**
-* Fanta.css (Fantasy + CSS)
-* Version 0.1.0
-* https://github.com/jamezmca/fantacss
-*
-* Sections
-* 1. Content sectioning
-* 2. Text content
-* 3. Inline text semantics
-* 4. Image and multimedia
-* 5. Tables
-* 6. Forms
-* 7. Interactive elements
-*
-*/
-
 @import url("https://fonts.googleapis.com/css2?family=Eczar:wght@400..800&family=Grenze:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 
 :root {
-  --background-primary: white;
-  --background-secondary: "";
-  --background-tertiary: #dbeafe;
-  --background-accent: "";
-  --background-compliment: "";
-  --background-gradient: "";
-  --background-muted: #f8fafc;
+  /* Light Theme */
+  --background-primary: #ffffff; /* White background */
+  --background-secondary: #f0fdf4; /* Subtle neon green-tinted background */
+  --background-tertiary: #eaffd0; /* Light neon green */
+  --background-accent: #aefb80; /* Bright neon green accent */
+  --background-compliment: #d9f99d; /* Complimentary muted green */
+  --background-muted: #f8fafc; /* Muted background */
 
-  --color-primary: #030615;
-  --color-secondary: "";
-  --color-tertiary: "";
-  --color-accent: "";
-  --color-compliment: "";
-  --color-gradient: "";
-  --color-muted: ;
-  --color-link: #2563eb;
-  --color-link-transparent: rgba(37, 99, 235, 0.1);
+  --color-primary: #0f172a; /* Dark text color */
+  --color-secondary: #3a5a40; /* Secondary darker green text */
+  --color-accent: #16a34a; /* Neon green for buttons or highlighted text */
+  --color-compliment: #4ade80; /* Complimentary bright green */
+  --color-link: #16a34a; /* Neon green link */
+  --color-link-hover: #059669; /* Darker green on hover */
 
-  --color-success: "";
-  --color-warning: "";
-  --color-error: "";
-  --color-info: "";
-  --color-highlight: #fef9c3;
+  --color-success: #16a34a; /* Neon green for success */
+  --color-warning: #facc15; /* Yellow for warnings */
+  --color-error: #dc2626; /* Red for errors */
+  --color-info: #38bdf8; /* Blue for informational elements */
+  --color-highlight: #4ade80; /* Bright green highlight */
 
-  --gradient-start: #9580ff;
-  --gradient-end: #80ffea;
+  --gradient-start: #16a34a; /* Neon green gradient start */
+  --gradient-end: #4ade80; /* Neon green gradient end */
 
-  --border-primary: #f1f5f9;
-  --border-secondary: #bed1e7;
-  --border-highlight: #64748b;
-  --border-tertiary: "";
+  --border-primary: #d1fae5; /* Light green for borders */
+  --border-secondary: #86efac; /* Brighter green for secondary borders */
+  --border-highlight: #16a34a; /* Neon green for highlight borders */
 
-  --shadow-dark: "";
-  --shadow-light: "";
-  --shadow-text: "";
+  --shadow-dark: rgba(0, 0, 0, 0.1); /* Light shadow */
+  --shadow-light: rgba(255, 255, 255, 0.5); /* Subtle glow effect */
+
+  --text-selection: #aefb80; /* Neon green selection highlight */
 
   --padding-small: 1rem;
   --padding-large: 2rem;
 
   --border-radius-small: 0.5rem;
   --border-radius-large: 0.75rem;
-  --highlight-border-radius: 0.5rem;
-
-  --text-selection: "";
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background-primary: #05070f;
-    --background-secondary: #0e101e;
-    --background-tertiary: #121424;
-    --background-accent: "";
-    --background-compliment: "";
-    --background-gradient: "";
-    --background-muted: #1a1e32;
+    /* Dark Theme */
+    --background-primary: #06130d; /* Darker green background */
+    --background-secondary: #2d6a4f; /* Subtle dark green background */
+    --background-tertiary: #40916c; /* Slightly brighter green */
+    --background-accent: #4ade80; /* Neon green accent */
+    --background-compliment: #d1fae5; /* Light green for highlights */
+    --background-muted: #0f172a; /* Dark muted background */
 
-    --color-primary: white;
-    --color-secondary: "";
-    --color-tertiary: "";
-    --color-accent: "";
-    --color-compliment: "";
-    --color-gradient: "";
-    --color-muted: ;
-    --color-link: #60a5fa;
-    --color-link-transparent: rgba(37, 99, 235, 0.1);
+    --color-primary: #f8fafc; /* White text for dark mode */
+    --color-secondary: #d1fae5; /* Light green secondary text */
+    --color-accent: #4ade80; /* Neon green for buttons or highlighted text */
+    --color-compliment: #aefb80; /* Bright green for complementary text */
+    --color-link: #aefb80; /* Neon green link */
+    --color-link-hover: #86efac; /* Slightly darker neon green on hover */
 
-    --color-success: "";
-    --color-warning: "";
-    --color-error: "";
-    --color-info: "";
-    --color-highlight: #fef9c3;
+    --color-success: #4ade80; /* Neon green for success */
+    --color-warning: #facc15; /* Yellow for warnings */
+    --color-error: #dc2626; /* Red for errors */
+    --color-info: #38bdf8; /* Blue for informational elements */
+    --color-highlight: #aefb80; /* Bright green highlight */
 
-    --gradient-start: #9580ff;
-    --gradient-end: #80ffea;
+    --gradient-start: #16a34a; /* Neon green gradient start */
+    --gradient-end: #4ade80; /* Neon green gradient end */
 
-    --border-primary: #29325b;
-    --border-secondary: #323c71;
-    --border-highlight: #4649af;
-    --border-tertiary: "";
+    --border-primary: #2d6a4f; /* Dark green for borders */
+    --border-secondary: #86efac; /* Brighter green for secondary borders */
+    --border-highlight: #4ade80; /* Neon green for highlight borders */
 
-    --shadow-dark: "";
-    --shadow-light: "";
-    --shadow-text: "";
+    --shadow-dark: rgba(0, 0, 0, 0.5); /* Dark shadow */
+    --shadow-light: rgba(4, 255, 145, 0.3); /* Neon glow effect */
+
+    --text-selection: #4ade80; /* Neon green selection highlight */
 
     --padding-small: 1rem;
     --padding-large: 2rem;
 
     --border-radius-small: 0.5rem;
     --border-radius-large: 0.75rem;
-    --highlight-border-radius: 0.5rem;
-
-    --text-selection: "";
   }
 }
-
 * {
   margin: 0;
   padding: 0;
@@ -119,11 +90,30 @@
   font-family: "Eczar", serif;
 }
 
+#root {
+  display: flex;
+  flex-direction: column;
+  height: 100%; /* Full height */
+}
+
+html,
+body {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
 body {
   background: var(--background-primary);
   color: var(--color-primary);
   font-size: 0.875rem;
   line-height: 1.6rem;
+}
+
+.content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
 }
 
 /* Special */
@@ -194,7 +184,28 @@ main {
 header {
 }
 
-footer {
+.footer {
+  text-align: center;
+  padding: 1rem;
+  color: var(--color-primary);
+  border-top: 1px solid var(--border-secondary);
+  text-align: center;
+  padding: var(--padding-small);
+}
+
+.footer p {
+  margin: 0.5rem 0;
+}
+
+.footer-link {
+  color: var(--color-accent);
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.footer-link:hover {
+  text-decoration: underline;
+  color: var(--color-link);
 }
 
 nav {
@@ -679,4 +690,25 @@ details[open] summary {
   input {
     max-width: 600px;
   }
+}
+
+/* Style for Hire Michael todo item */
+.hire-michael {
+  background: linear-gradient(
+    135deg,
+    #a8e6a1,
+    #b3f0c0,
+    #d0f5d7,
+    #c3e8b1,
+    #80e6a1
+  );
+  color: white;
+  padding: 10px;
+  border-radius: 8px;
+  margin: 5px 0;
+}
+
+/* Style for completed todos */
+.completed {
+  opacity: 0.6;
 }
