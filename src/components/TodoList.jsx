@@ -18,6 +18,9 @@ export function TodoList(props) {
       {filterTodoList.map((todo, todoIndex) => (
         <TodoCard
           key={todoIndex}
+          todoIndex={todos.findIndex((val) => val.input == todo.input)}
+          handleDeleteTodo={props.handleDeleteTodo}
+          handleCompleteTodo={props.handleCompleteTodo}
           todo={todo}
           isHireMichael={todo.input === "HIRED MICHAEL"} // Pass a prop to indicate if it's "Hire Michael"
         />
